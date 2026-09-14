@@ -26,9 +26,9 @@ def torch_gc():
 
 def generate(args):
     # case setup
-    image_path = "assets/girl.png"
+    image_path = args.image_path
     image = load_image(image_path)
-    prompt = "A woman sits at a wooden table by the window in a cozy café. She reaches out with her right hand, picks up the white coffee cup from the saucer, and gently brings it to her lips to take a sip. After drinking, she places the cup back on the table and looks out the window, enjoying the peaceful atmosphere."
+    prompt = args.prompt
     negative_prompt = "Bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards"
     spatial_refine_only = False
 
@@ -83,7 +83,7 @@ def generate(args):
         prompt=prompt,
         negative_prompt=negative_prompt,
         resolution='480p', # 480p / 720p
-        num_frames=93,
+        num_frames=args.num_frames,
         num_inference_steps=50,
         guidance_scale=4.0,
         generator=generator
@@ -111,7 +111,7 @@ def generate(args):
         image=image,
         prompt=prompt,
         resolution='480p', # 480p / 720p
-        num_frames=93,
+        num_frames=args.num_frames,
         num_inference_steps=16,
         use_distill=True,
         guidance_scale=1.0,
@@ -166,6 +166,21 @@ def generate(args):
 
 def _parse_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--image_path",
+        type=str,
+        default="assets/girl.png",
+    )
+    parser.add_argument(
+        "--prompt",
+        type=str,
+        default="A woman sits at a wooden table by the window in a cozy café. She reaches out with her right hand, picks up the white coffee cup from the saucer, and gently brings it to her lips to take a sip. After drinking, she places the cup back on the table and looks out the window, enjoying the peaceful atmosphere.",
+    )
+    parser.add_argument(
+        "--num_frames",
+        type=int,
+        default=93,
+    )
     parser.add_argument(
         "--context_parallel_size",
         type=int,
