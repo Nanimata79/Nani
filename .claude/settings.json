@@ -1,0 +1,34 @@
+{
+  "enabledPlugins": {
+    "unslop@heydamir": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "humanizer@humanizer": true,
+    "last30days@last30days-skill": true
+  },
+  "extraKnownMarketplaces": {
+    "heydamir": {
+      "source": {
+        "source": "github",
+        "repo": "heydamir/unslop"
+      }
+    },
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
+    "last30days-skill": {
+      "source": {
+        "source": "github",
+        "repo": "mvanhorn/last30days-skill"
+      }
+    }
+  }
+}

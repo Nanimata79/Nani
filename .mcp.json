@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "scrapling": {
+      "type": "stdio",
+      "command": "scrapling",
+      "args": [
+        "mcp",
+        "--executable-path",
+        "/opt/pw-browsers/chromium"
+      ],
+      "env": {}
+    }
+  }
+}

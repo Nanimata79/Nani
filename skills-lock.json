@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "skills": {
+    "book-to-skill": {
+      "source": "virgiliojr94/book-to-skill",
+      "commit": "57f3db51ff338edfd940a255b885c60ac90e40fa",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "ffa5d8ef9f0c581e823ee371c53ba86b2dddab30cfc226c8e91708a57334108d"
+    },
+    "diagram-design": {
+      "source": "cathrynlavery/diagram-design",
+      "commit": "0eeda75a708f419560d5e032693618bb9954f17b",
+      "sourceType": "github",
+      "skillPath": "skills/diagram-design/SKILL.md",
+      "computedHash": "f5f88973e37f06c0f73afed09341205aa7175c45e41dac1259868428e77bf6bb"
+    }
+  }
+}
